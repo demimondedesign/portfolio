@@ -30,23 +30,12 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Bespoke  Web Design for Escorts"
+					tagline="We build elegant custom websites that optimize SEO and increase your bookings."
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div>
 				</Hero>
 
-				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
 			</header>
 
 			<Skills />
@@ -129,7 +118,7 @@ const projects = (await getCollection('work'))
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
-			grid-template-columns: 6fr 4fr;
+			/* grid-template-columns: 6fr 4fr; */
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
 		}
