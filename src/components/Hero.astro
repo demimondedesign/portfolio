@@ -8,22 +8,26 @@ interface Props {
 const { align = 'center', tagline, title } = Astro.props;
 ---
 
-<header class:list={['hero stack gap-4', align]}>
-	<div class="stack gap-2">
-		<div>
-			<h1 class="title">{title}</h1>
+
+<header class:list={['hero w-full bg-center bg-cover h-96', align]}>
+	<div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+		<div class="text-center">
+				<div class="py-2">
+					<h1 class="title">{title}</h1>
+				</div>
+				<div class="py-6">
+					{tagline && <p class="tagline">{tagline}</p>}
+				</div>
 		</div>
-		<div class="text-align-center">
-			{tagline && <p class="tagline">{tagline}</p>}
-		</div>
-	</div>
+</div>
 	<slot />
 </header>
 
+
 <style>
+
 	.hero {
-		font-size: var(--text-lg);
-		text-align: center;
+		background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80);
 	}
 
 	.hero .text-align-center {
@@ -33,18 +37,19 @@ const { align = 'center', tagline, title } = Astro.props;
 
 	.title,
 	.tagline {
-		max-width: 37ch;
+		/* max-width: 37ch; */
+		color: #af9c6d;
 		margin-inline: auto;
 	}
 
 	.title {
 		font-size: var(--text-3xl);
-		color: var(--gray-0);
+		color: #fefefe;
 	}
 
 	@media (min-width: 50em) {
 		.hero {
-			font-size: var(--text-xl);
+			font-size: var(--text-lg);
 		}
 
 		.start {
@@ -57,7 +62,7 @@ const { align = 'center', tagline, title } = Astro.props;
 		}
 
 		.title {
-			font-size: var(--text-5xl);
+			font-size: var(--text-4xl);
 		}
 	}
 </style>

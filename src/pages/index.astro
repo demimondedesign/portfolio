@@ -26,17 +26,14 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
-				<Hero
-					title="Bespoke  Web Design for Escorts"
-					tagline="We build elegant custom websites that optimize SEO and increase your bookings."
-					align="start"
-				>
-				</Hero>
-
-			</header>
+	<div class="stack gap-20 lg:gap-48" id="index-page">
+		<div class="padding-0 wrapper stack gap-8 lg:gap-20">
+			<Hero
+				title="Bespoke  Web Design for Escorts"
+				tagline="We build elegant custom websites that optimize SEO and increase your bookings."
+				align="start"
+			>
+			</Hero>
 
 			<Skills />
 		</div>
@@ -96,6 +93,9 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+	#index-page .padding-0 {
+		padding: 0 !important;
+	}
 	.hero {
 		display: flex;
 		flex-direction: column;
