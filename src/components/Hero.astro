@@ -9,9 +9,9 @@ const { align = 'center', tagline, title } = Astro.props;
 ---
 
 
-<header class:list={['hero w-full bg-center bg-cover h-96', align]}>
+<header class:list={['hero w-full bg-center bg-cover', align]}>
 	<div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
-		<div class="text-center">
+		<div class="text-center responsive-padding">
 				<div class="py-2">
 					<h1 class="title">{title}</h1>
 				</div>
@@ -27,7 +27,13 @@ const { align = 'center', tagline, title } = Astro.props;
 <style>
 
 	.hero {
-		background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80);
+		/* background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80); */
+		background-image: url('/assets/backgrounds/header-background.png');
+		height: 30rem;
+	}
+
+	.hero .responsive-padding {
+		padding: 7rem;
 	}
 
 	.hero .text-align-center {
@@ -37,19 +43,23 @@ const { align = 'center', tagline, title } = Astro.props;
 
 	.title,
 	.tagline {
-		/* max-width: 37ch; */
 		color: #af9c6d;
 		margin-inline: auto;
+		font-size: 	var(--text-sm);
 	}
 
 	.title {
-		font-size: var(--text-3xl);
+		font-size: var(--text-xl);
 		color: #fefefe;
 	}
 
 	@media (min-width: 50em) {
 		.hero {
 			font-size: var(--text-lg);
+		}
+
+		.hero .responsive-padding {
+			padding: 2rem;
 		}
 
 		.start {
