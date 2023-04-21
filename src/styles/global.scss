@@ -181,6 +181,18 @@ h5 {
 
 /* Utilities */
 
+.hide-mobile {
+	@include mobile-only {
+		display: none;
+	}
+}
+
+.hide-not-mobile {
+	@media (min-width: $breakpoint-mobile) {
+		display: none;
+	}
+}
+
 .sr-only {
 	position: absolute;
 	width: 1px;
