@@ -33,14 +33,9 @@ const { align = 'center', tagline, title } = Astro.props;
 	@import '../styles/sass-variables';
 
 	.hero {
-		position: relative;
 		// background-image: url('/assets/backgrounds/header-background.png');
 		background-image: url('/assets/backgrounds/background-tile.jpg');
 		height: 30rem;
-		.logo {
-			height: 20rem;
-			background-image: url('/assets/logo-sm.svg');
-		}
 	}
 
 	.hero .responsive-px {
@@ -55,7 +50,7 @@ const { align = 'center', tagline, title } = Astro.props;
 
 	.title,
 	.tagline {
-		color: #af9c6d;
+		color: #be8d58;
 		margin-inline: auto;
 	}
 
@@ -66,11 +61,8 @@ const { align = 'center', tagline, title } = Astro.props;
 
 	@media (min-width: $breakpoint-mobile) {
 		.hero {
+			height: 40rem;
 			font-size: var(--text-lg);
-			.logo {
-				height: 20rem;
-				background-image: url('/assets/logo.svg');
-			}
 		}
 
 		.hero .responsive-px {
