@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 interface Props {
 	title: string;
 	tagline?: string;
@@ -11,11 +13,14 @@ const { align = 'center', tagline, title } = Astro.props;
 
 <header class:list={['hero w-full bg-center bg-repeat', align]}>
 	<div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
-		<div class="text-center responsive-padding">
+		<div class="text-center">
 				<div class="py-2">
-					<h1 class="title">{title}</h1>
+					<h1 class="title hidden">{title}</h1>
+					<Logo />
+					<!-- <div class="logo w-full bg-center bg-cover"></div> -->
+					<!-- <img src="/assets/logo-sm.svg" alt="Demimonde Designs" class="mx-auto w-full" /> -->
 				</div>
-				<div class="py-6">
+				<div class="py-2 responsive-px">
 					{tagline && <p class="tagline">{tagline}</p>}
 				</div>
 		</div>
@@ -28,13 +33,19 @@ const { align = 'center', tagline, title } = Astro.props;
 	@import '../styles/sass-variables';
 
 	.hero {
+		position: relative;
 		// background-image: url('/assets/backgrounds/header-background.png');
 		background-image: url('/assets/backgrounds/background-tile.jpg');
 		height: 30rem;
+		.logo {
+			height: 20rem;
+			background-image: url('/assets/logo-sm.svg');
+		}
 	}
 
-	.hero .responsive-padding {
-		padding: 7rem;
+	.hero .responsive-px {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}
 
 	.hero .text-align-center {
@@ -56,10 +67,15 @@ const { align = 'center', tagline, title } = Astro.props;
 	@media (min-width: $breakpoint-mobile) {
 		.hero {
 			font-size: var(--text-lg);
+			.logo {
+				height: 20rem;
+				background-image: url('/assets/logo.svg');
+			}
 		}
 
-		.hero .responsive-padding {
-			padding: 2rem;
+		.hero .responsive-px {
+			padding-left: 2rem 2rem;
+			padding-right: 2rem 2rem;
 		}
 		
 		.tagline {

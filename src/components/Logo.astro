@@ -1,0 +1,28 @@
+---
+interface Props {
+	smUrl?: string;
+	url?: string;
+}
+
+const { smUrl = '/assets/logo-sm.svg', url = '/assets/logo.svg' } = Astro.props;
+---
+
+<img src={url} alt="Demimonde Designs" class="mx-auto w-full hide-mobile" />
+<img src={smUrl} alt="Demimonde Designs" class="mx-auto w-full hide-not-mobile" />
+
+<style lang="scss">
+	@import '../styles/sass-variables';
+
+  .hide-mobile {
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  .hide-not-mobile {
+    @media (min-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+</style>

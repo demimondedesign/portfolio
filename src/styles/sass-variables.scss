@@ -1,3 +1,16 @@
-$breakpoint-mobile: 576px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 992px;
+/* Media */
+
+// breakpoint variables
+$mobile: 576;
+$tablet: 768;
+$desktop: 992;
+
+$breakpoint-mobile: $mobile * 1px;
+$breakpoint-tablet: $tablet * 1px;
+$breakpoint-desktop: $desktop * 1px;
+
+$max-mobile: ($mobile - 1) * 1px;
+
+@mixin mobile-only {
+  @media (max-width: $max-mobile) { @content; }
+}
