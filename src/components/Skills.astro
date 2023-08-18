@@ -6,19 +6,33 @@ import Icon from './Icon.astro';
 	<div class="m-4 skills">
 
 		<div class="box stack gap-1 lg:gap-2">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-			<h2>Full Stack</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+			<div class="center-mobile-only">
+				<Icon icon="feather" color="var(--accent-regular)" size="2.5rem" gradient />
+			</div>
+			<div class="center-mobile-only">
+				<h2>Lightweight</h2>
+			</div>
+			<p>Wordpress plugins make websites slow and clunky. Our sites are built for speed. </p>
 		</div>
 		<div class="box stack gap-1 lg:gap-2">
-			<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-			<h2>Industry Leader</h2>
-			<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+			<div class="center-mobile-only">
+				<Icon icon="palette" color="var(--accent-regular)" size="2.5rem" gradient />
+			</div>
+			<div class="center-mobile-only">
+				<h2>Custom</h2>
+			</div>
+			<p>Our websites are built completely from scratch — no premade Squarespace themes. We work with you to create something completely unique that reflects your personal brand.</p>
 		</div>
 		<div class="box stack gap-1 lg:gap-2">
-			<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-			<h2>Strategy-Minded</h2>
-			<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+			<div class="center-mobile-only">
+				<Icon icon="sparkle" color="var(--accent-regular)" size="2.5rem" gradient />
+			</div>
+			<div class="center-mobile-only">
+				<h2>Simple</h2>
+			</div>
+			<p>Share your vision, and we'll actualize it. Want a more hands on experience?
+				We'll make it easy to update your site yourself.
+			</p>
 		</div>
 	</div>
 
@@ -26,10 +40,15 @@ import Icon from './Icon.astro';
 
 <style>
 	.box {
-		border: 1px solid var(--gray-800);
-		padding: 1rem;
-		background-color: var(--gray-999_40);
+		border: var(--box-border);
+		border-radius: .6rem;
+		padding: 1rem 1.5rem 2rem 1.5rem;
+		background: var(--bg-alt);
 		box-shadow: var(--shadow-sm);
+
+		@include mobile-only {
+			display: none;
+		}
 	}
 
 	.skills {
@@ -39,11 +58,12 @@ import Icon from './Icon.astro';
 	}
 
 	.skills h2 {
-		font-size: var(--text-lg);
+		font-size: var(--text-xl);
+		padding: 1rem 0rem;
 	}
 
 	.skills p {
-		color: var(--gray-400);
+		color: var(--gray-200);
 	}
 
 	@media (min-width: 50em) {

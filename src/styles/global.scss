@@ -3,30 +3,36 @@
 /* Global variables */
 :root {
 	/* Colors */
-	--gray-0: #090b11;
-	--gray-50: #141925;
-	--gray-100: #283044;
-	--gray-200: #3d4663;
-	--gray-300: #505d84;
-	--gray-400: #6474a2;
-	--gray-500: #8490b5;
-	--gray-600: #a3acc8;
+	--gray-0: #0a0a0a;
+	--gray-50: #1e1e1e;
+	--gray-100: #4b4b4b;
+	--gray-200: #646464;
+	--gray-300: #818181;
+	--gray-400: #9b9b9b;
+	--gray-500: #a7aab3;
+	--gray-600: #b2b7c7;
 	--gray-700: #c3cadb;
 	--gray-800: #e3e6ee;
 	--gray-900: #f3f4f7;
 	--gray-999-basis: 0, 0%, 100%;
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
+	--gold: #ca873e;
+	--light-gold: #ffb867;
+	--dark-gold: #b07a3f;
 	/* Primary Background Color */
 	--gray-999: #fefefe;
 
-	--accent-light: #c561f6;
-	--accent-regular: #7611a6;
-	--accent-dark: #1c0056;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
+	--accent-light: #ffb867;
+	--accent-regular: var(--gold);
+	--accent-dark: #644622;
+	// --accent-overlay: hsla(280, 89%, 67%, 0.33);
+	--accent-overlay: hsla(32, 78%, 63%, 0.33);
 	--accent-subtle-overlay: var(--accent-overlay);
 	--accent-text-over: var(--gray-999);
 
 	--link-color: var(--accent-regular);
+
+	--heading-color: var(--dark-gold);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -41,7 +47,7 @@
 	);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ca7879,
+		#ffe08c,
 		var(--accent-regular),
 		var(--accent-dark)
 	);
@@ -55,22 +61,24 @@
 	--shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
 		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
 
-	/* Text Sizes */
-	--text-sm: 0.875rem;
-	--text-base: 1rem;
-	--text-md: 1.125rem;
-	--text-lg: 1.25rem;
+	/* Backgrounds */
+	--bg-tile: repeat url('/assets/backgrounds/bg-tile.jpg');
+	--bg-alt: linear-gradient(0deg, rgba(227,163,92,0.6) 0%, rgba(219,164,100,0.4) 6%, rgba(196,153,104,0.2) 21%, rgba(255,255,255,1) 51%);
 	--text-xl: 1.625rem;
 	--text-2xl: 2.125rem;
 	--text-3xl: 2.625rem;
 	--text-4xl: 3.5rem;
 	--text-5xl: 4.5rem;
 
+	/* Borders */
+	--box-border: 1px solid #efe5db;
+
 	/* Fonts */
 	--font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-body: 'Public Sans', var(--font-system);
-	--font-brand: Rubik, var(--font-system);
+	// --font-brand: Rubik, var(--font-system);
+	--font-brand: 'Josefin Sans', serif, var(--font-system);
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
@@ -90,21 +98,30 @@
 	--gray-900: #141925;
 	--gray-999-basis: 225, 31%, 5%;
 	--gray-999: #090b11;
+	--gold: #ca873e;
 
-	--accent-light: #1c0056;
-	--accent-regular: #7611a6;
-	--accent-dark: #c561f6;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
-	--accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
+	--accent-light: #221a12;
+	--accent-regular: var(--gold);
+	--accent-dark: #ffd19f;
+	--accent-overlay: hsla(32, 81%, 64%, 0.33);
+	--accent-subtle-overlay: hsla(32, 83%, 35%, 0.33);
 	--accent-text-over: var(--gray-0);
+
+	--bg-tile: repeat url('/assets/backgrounds/bg-tile-dark.jpg');
+
+	--box-border: 1px solid #d59a5c4d;
+
+	--bg-alt: var(--bg-tile);
+
+	--heading-color: var(--light-gold);
 
 	--link-color: var(--accent-dark);
 
-	--gradient-stop-1: #4c11c6;
+	--gradient-stop-1: #87620a;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ca7879,
+		#ffe08c,
 		var(--accent-regular),
 		var(--accent-light)
 	);
@@ -156,7 +173,8 @@ h5 {
 	line-height: 1.1;
 	font-family: var(--font-brand);
 	font-weight: 600;
-	color: var(--gray-100);
+	// color: var(--gray-100);
+	color: var(--heading-color);
 }
 
 h1 {
@@ -190,6 +208,12 @@ h5 {
 .hide-not-mobile {
 	@media (min-width: $breakpoint-mobile) {
 		display: none;
+	}
+}
+
+.center-mobile-only {
+	@include mobile-only {
+		margin: auto;
 	}
 }
 
