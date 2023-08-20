@@ -32,7 +32,7 @@
 
 	--link-color: var(--accent-regular);
 
-	--heading-color: var(--dark-gold);
+	--heading-color: var(--gray-0);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -63,7 +63,8 @@
 
 	/* Backgrounds */
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile.jpg');
-	--bg-alt: linear-gradient(0deg, rgba(227,163,92,0.6) 0%, rgba(219,164,100,0.4) 6%, rgba(196,153,104,0.2) 21%, rgba(255,255,255,1) 51%);
+	// --bg-textured: linear-gradient(340deg, rgba(227,163,92,0.6) 0%, rgba(219,164,100,0.4) 6%, rgba(196,153,104,0.2) 21%, rgba(255,255,255,1) 51%);
+	--bg-textured: linear-gradient(340deg, rgba(227,163,92,0.8) 0%, rgba(219,164,100,0.4) 22%, rgba(196,153,104,0.2) 42%, rgba(255,255,255,1) 59%);
 	--text-xl: 1.625rem;
 	--text-2xl: 2.125rem;
 	--text-3xl: 2.625rem;
@@ -109,9 +110,9 @@
 
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile-dark.jpg');
 
-	--box-border: 1px solid #d59a5c4d;
+	--box-border: 1px solid #624f3b4d;
 
-	--bg-alt: var(--bg-tile);
+	--bg-textured: var(--bg-tile);
 
 	--heading-color: var(--light-gold);
 
@@ -127,12 +128,14 @@
 	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
-	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
-		0px 2px 2px rgba(255, 255, 255, 0.02), 0px 0px 1px rgba(255, 255, 255, 0.03);
-	--shadow-md: 0px 28px 11px rgba(255, 255, 255, 0.01), 0px 16px 10px rgba(255, 255, 255, 0.03),
-		0px 7px 7px rgba(255, 255, 255, 0.05), 0px 2px 4px rgba(255, 255, 255, 0.06);
-	--shadow-lg: 0px 62px 25px rgba(255, 255, 255, 0.01), 0px 35px 21px rgba(255, 255, 255, 0.05),
-		0px 16px 16px rgba(255, 255, 255, 0.1), 0px 4px 9px rgba(255, 255, 255, 0.12);
+	--shadow-sm: 0px 6px 3px rgba(10, 10, 10, 0.01), 0px 4px 2px rgba(100, 100, 100, 0.01),
+		0px 2px 2px rgba(100, 100, 100, 0.02), 0px 0px 1px rgba(100, 100, 100, 0.03);
+	--shadow-md: 28px 28px 11px rgba(10, 10, 10, 0.01), 16px 16px 10px rgba(100, 100, 100, 0.03),
+	7px 7px 7px rgba(100, 100, 100, 0.05), 2px 2px 4px rgba(100, 100, 100, 0.06);
+	// --shadow-lg: 62px 62px 25px rgba(10, 10, 10, 0.01), 35px 35px 21px rgba(100, 100, 100, 0.05),
+	// 16px 16px 16px rgba(100, 100, 100, 0.1), 4px 4px 9px rgba(100, 100, 100, 0.12);
+	--shadow-lg: 62px 62px 25px rgba(170, 135, 0, 0.01), 35px 35px 21px rgba(170, 135, 0, 0.05),
+	16px 16px 16px rgba(170, 135, 0, 0.06), 4px 4px 9px rgba(170, 135, 0, 0.1);
 }
 
 html,

@@ -43,8 +43,8 @@ import Icon from './Icon.astro';
 		border: var(--box-border);
 		border-radius: .6rem;
 		padding: 1rem 1.5rem 2rem 1.5rem;
-		background: var(--bg-alt);
-		box-shadow: var(--shadow-sm);
+		background: var(--bg-textured);
+		box-shadow: var(--shadow-lg);
 
 		@include mobile-only {
 			display: none;
@@ -58,8 +58,9 @@ import Icon from './Icon.astro';
 	}
 
 	.skills h2 {
+		font-weight: 700;
 		font-size: var(--text-xl);
-		padding: 1rem 0rem;
+		padding: .5rem 0rem 1rem 0rem;
 	}
 
 	.skills p {
