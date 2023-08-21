@@ -13,4 +13,13 @@ $max-mobile: ($mobile - 1) * 1px;
 
 @mixin mobile-only {
   @media (max-width: $max-mobile) { @content; }
+
+}
+
+/* Text Styles */
+@mixin fancy-heading {
+	background-image: var(--text-gradient);
+	color:transparent !important;
+	-webkit-background-clip:text;
+  text-shadow: var(--shadow-heading);
 }

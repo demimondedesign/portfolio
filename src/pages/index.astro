@@ -38,54 +38,55 @@ const projects = (await getCollection('work'))
 			<Skills />
 		</div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
+		<main>
+			<div class="wrapper alt-wrapper stack gap-20 lg:gap-48">
+				<section class="section with-background with-cta">
+					<header class="section-header stack gap-2 lg:gap-4">
+						<h3>Selected Work</h3>
+						<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					</header>
+					<div class="gallery">
+						<Grid variant="offset">
+							{
+								projects.map((project) => (
+									<li>
+										<PortfolioPreview project={project} />
+									</li>
+								))
+							}
+						</Grid>
+					</div>
+					<div class="cta">
+						<CallToAction href="/work/">
+							View All
+							<Icon icon="arrow-right" size="1.2em" />
+						</CallToAction>
+					</div>
+				</section>
+			</div>
 
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to recieve praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
+			<div class="wrapper stack gap-20 lg:gap-48">
+				<section class="section with-background bg-variant">
+					<header class="section-header stack gap-2 lg:gap-4">
+						<h3>Mentions</h3>
+						<p>
+							I have been fortunate enough to recieve praise for my work in several publications. Take
+							a look below to learn more.
+						</p>
+					</header>
+					<div class="gallery">
+						<Grid variant="small">
+							{
+								['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+									<li class="mention-card">
+										<p>{brand}</p>
+									</li>
+								))
+							}
+						</Grid>
+					</div>
+				</section>
+			</div>
 		</main>
 
 		<ContactCTA />
@@ -139,7 +140,7 @@ const projects = (await getCollection('work'))
 	/* ====================================================== */
 
 	.section {
-		/* padding-inline: 1.5rem; */
+		padding-inline: 1.5rem;
 		display: grid;
 		gap: 2rem;
 	}
@@ -179,7 +180,8 @@ const projects = (await getCollection('work'))
 	}
 
 	.section-header h3 {
-		font-size: var(--text-2xl);
+		font-size: var(--text-3xl);
+		color: var(--heading-color);
 	}
 
 	@media (min-width: 50em) {

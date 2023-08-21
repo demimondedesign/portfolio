@@ -11,8 +11,8 @@
 	--gray-400: #9b9b9b;
 	--gray-500: #a7aab3;
 	--gray-600: #b2b7c7;
-	--gray-700: #c3cadb;
-	--gray-800: #e3e6ee;
+	--gray-700: #e0e0e0;
+	--gray-800: #f0f0f0;
 	--gray-900: #f3f4f7;
 	--gray-999-basis: 0, 0%, 100%;
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
@@ -34,6 +34,8 @@
 
 	--heading-color: var(--gray-0);
 
+	--alt-bg-color: var(--gray-700);
+
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
 	--gradient-stop-2: var(--accent-regular);
@@ -53,6 +55,14 @@
 	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
+	--text-gradient: linear-gradient(
+		to right,
+		#a17237 0,
+		#ca873e 22%, 
+		#ca873e 78%,
+		#a17237 100%
+		);
+
 	/* Shadows */
 	--shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
 		0px 2px 2px rgba(9, 11, 17, 0.02), 0px 0px 1px rgba(9, 11, 17, 0.03);
@@ -60,6 +70,8 @@
 		0px 7px 7px rgba(9, 11, 17, 0.05), 0px 2px 4px rgba(9, 11, 17, 0.06);
 	--shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
 		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
+
+	--shadow-heading: 1px 1px 4px rgba(0,0,0,0.15);
 
 	/* Backgrounds */
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile.jpg');
@@ -83,6 +95,10 @@
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
+
+	.wrapper.alt-wrapper {
+		--heading-color: var(--gray-50);
+	}
 }
 
 :root.theme-dark {
@@ -94,9 +110,9 @@
 	--gray-400: #8490b5;
 	--gray-500: #6474a2;
 	--gray-600: #505d84;
-	--gray-700: #3d4663;
-	--gray-800: #283044;
-	--gray-900: #141925;
+	--gray-700: #595d68;
+	--gray-800: #404040;
+	--gray-900: #191919;
 	--gray-999-basis: 225, 31%, 5%;
 	--gray-999: #090b11;
 	--gold: #ca873e;
@@ -116,6 +132,8 @@
 
 	--heading-color: var(--light-gold);
 
+	--alt-bg-color: var(--gray-900);
+
 	--link-color: var(--accent-dark);
 
 	--gradient-stop-1: #87620a;
@@ -128,6 +146,17 @@
 	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
+	--text-gradient: linear-gradient(
+		to right,
+		#a17237 0,
+		#ca873e 22%, 
+		#fac286 45%,
+		#f8dd94 50%,
+		#fac286 55%,
+		#ca873e 78%,
+		#a17237 100%
+		);
+
 	--shadow-sm: 0px 6px 3px rgba(10, 10, 10, 0.01), 0px 4px 2px rgba(100, 100, 100, 0.01),
 		0px 2px 2px rgba(100, 100, 100, 0.02), 0px 0px 1px rgba(100, 100, 100, 0.03);
 	--shadow-md: 28px 28px 11px rgba(10, 10, 10, 0.01), 16px 16px 10px rgba(100, 100, 100, 0.03),
@@ -136,6 +165,8 @@
 	// 16px 16px 16px rgba(100, 100, 100, 0.1), 4px 4px 9px rgba(100, 100, 100, 0.12);
 	--shadow-lg: 62px 62px 25px rgba(170, 135, 0, 0.01), 35px 35px 21px rgba(170, 135, 0, 0.05),
 	16px 16px 16px rgba(170, 135, 0, 0.06), 4px 4px 9px rgba(170, 135, 0, 0.1);
+	--shadow-heading: none;
+
 }
 
 html,
@@ -178,6 +209,9 @@ h5 {
 	font-weight: 600;
 	// color: var(--gray-100);
 	color: var(--heading-color);
+	&.fancy-heading {
+		@include fancy-heading;
+	}
 }
 
 h1 {
@@ -236,7 +270,12 @@ h5 {
 	width: 100%;
 	max-width: 83rem;
 	margin-inline: auto;
-	padding-inline: 1.5rem;
+	// padding-inline: 1.5rem;
+	padding: 4rem 0rem;
+}
+
+.wrapper.alt-wrapper {
+	background-color: var(--alt-bg-color);
 }
 
 .stack {
