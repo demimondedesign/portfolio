@@ -140,6 +140,7 @@ const projects = (await getCollection('work'))
 	/* ====================================================== */
 
 	.section {
+		max-width: 83rem;
 		padding-inline: 1.5rem;
 		display: grid;
 		gap: 2rem;
@@ -150,7 +151,7 @@ const projects = (await getCollection('work'))
 	}
 
 	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
+		/* --hero-bg: var(--bg-image-subtle-2); */
 
 		content: '';
 		position: absolute;
@@ -168,7 +169,7 @@ const projects = (await getCollection('work'))
 	}
 
 	.with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
+		/* --hero-bg: var(--bg-image-subtle-1); */
 	}
 
 	.section-header {
