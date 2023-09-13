@@ -34,13 +34,15 @@
 
 	--link-color: var(--accent-regular);
 
-	--heading-color: var(--dark-gold);
+	--heading-color: var(--gold);
+	--alt-heading-color: var(--accent-light);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
 	--gradient-stop-2: var(--accent-regular);
 	--gradient-stop-3: var(--accent-dark);
-	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 150%);
+	// --gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 150%);
+	--gradient-subtle: radial-gradient(circle, rgba(52,52,52,1) 0%, rgba(31,28,28,1) 72%);
 	--gradient-accent: linear-gradient(
 		150deg,
 		var(--gradient-stop-1),
@@ -67,13 +69,14 @@
 	/* Shadows */
 	--shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
 		0px 2px 2px rgba(9, 11, 17, 0.02), 0px 0px 1px rgba(9, 11, 17, 0.03);
-	--shadow-md: 0px 28px 11px rgba(9, 11, 17, 0.01), 0px 16px 10px rgba(9, 11, 17, 0.03),
-		0px 7px 7px rgba(9, 11, 17, 0.05), 0px 2px 4px rgba(9, 11, 17, 0.06);
+	--shadow-md: 0px 28px 11px rgba(9, 11, 17, 0.04), 0px 16px 10px rgba(9, 11, 17, 0.06),
+		0px 7px 7px rgba(9, 11, 17, 0.08), 0px 2px 4px rgba(9, 11, 17, 0.09);
 	--shadow-lg: 0px 62px 25px rgba(9, 11, 17, 0.01), 0px 35px 21px rgba(9, 11, 17, 0.05),
 		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
 
 	--shadow-heading: 1px 1px 4px rgba(0,0,0,0.15);
 	--shadow-vertical: 0px -2px 24px 0px rgba(197, 198, 199, 1), 0px 2px 24px 0px rgba(197, 198, 199, 1);
+	--shadow-alt: inset -8px -8px 45px 0px rgba(161,158,161,.8);
 
 	/* Backgrounds */
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile.jpg');
@@ -139,18 +142,19 @@
 	--border-color: rgba(89, 93, 104, .6);
 
 	/* Fonts */
-	--font-color: var(--very-light-gold);
+	--font-color: var(--gray-200);
 
 	--bg-textured: var(--bg-tile);
 
 	--heading-color: var(--light-gold);
+	--alt-heading-color: var(--dark-brown);
 
 	--link-color: var(--accent-dark);
 
 	/* Gradients */
 
 	--gradient-stop-1: #87620a;
-	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
+	--gradient-subtle: linear-gradient(150deg, rgba(202,135,62,1) 0%, rgba(230,146,57,1) 9%, rgba(255,184,103,1) 40%, rgba(245,233,220,1) 90%);;
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
 	--text-gradient: linear-gradient(
@@ -174,6 +178,7 @@
 	16px 16px 16px rgba(170, 135, 0, 0.06), 4px 4px 9px rgba(170, 135, 0, 0.1);
 	--shadow-heading: none;
 	--shadow-vertical: 0px -4px 24px 0px rgba(49,40,32,1), 0px 4px 24px 0px rgba(49,40,32,1);
+	--shadow-alt: inset -8px -8px 45px 0px rgba(176,122,63,1);
 
 	/* Buttons */
 	--button-bg: var(--gradient-accent-orange);

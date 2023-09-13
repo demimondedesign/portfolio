@@ -228,11 +228,15 @@ const projects = (await getCollection('work'))
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		font-size: var(--text-xl);
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
-		color: var(--gray-300);
+		color: var(--alt-heading-color);
 		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
+		/* box-shadow: inset -8px -8px 45px 0px rgba(161,158,161,.8); */
+		/* box-shadow: inset -8px -8px 45px 0px rgba(176,122,63,1); */
+		box-shadow: var(--shadow-alt);
+
 	}
 
 	@media (min-width: 50em) {
