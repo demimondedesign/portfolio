@@ -18,7 +18,9 @@
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gold: #ca873e;
 	--light-gold: #ffb867;
+	--very-light-gold: #f5e9dc;
 	--dark-gold: #b07a3f;
+	--dark-brown: #4a3117;
 	/* Primary Background Color */
 	--gray-999: #fefefe;
 
@@ -32,7 +34,7 @@
 
 	--link-color: var(--accent-regular);
 
-	--heading-color: var(--gray-0);
+	--heading-color: var(--dark-gold);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -47,10 +49,11 @@
 	);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
-		#ffe08c,
+		var(--accent-light),
 		var(--accent-regular),
 		var(--accent-dark)
 	);
+
 	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
 	--text-gradient: linear-gradient(
@@ -70,16 +73,13 @@
 		0px 16px 16px rgba(9, 11, 17, 0.1), 0px 4px 9px rgba(9, 11, 17, 0.12);
 
 	--shadow-heading: 1px 1px 4px rgba(0,0,0,0.15);
+	--shadow-vertical: 0px -2px 24px 0px rgba(197, 198, 199, 1), 0px 2px 24px 0px rgba(197, 198, 199, 1);
 
 	/* Backgrounds */
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile.jpg');
 	// --bg-textured: linear-gradient(340deg, rgba(227,163,92,0.6) 0%, rgba(219,164,100,0.4) 6%, rgba(196,153,104,0.2) 21%, rgba(255,255,255,1) 51%);
 	--bg-textured: linear-gradient(340deg, rgba(227,163,92,0.8) 0%, rgba(219,164,100,0.4) 22%, rgba(196,153,104,0.2) 42%, rgba(255,255,255,1) 59%);
-	--text-xl: 1.625rem;
-	--text-2xl: 2.125rem;
-	--text-3xl: 2.625rem;
-	--text-4xl: 3.5rem;
-	--text-5xl: 4.5rem;
+	--bg-alt-color: rgba(230, 230, 230, .7);
 
 	/* Borders */
 	--border-color: #eacdae;
@@ -91,9 +91,20 @@
 	--font-body: 'Public Sans', var(--font-system);
 	// --font-brand: Rubik, var(--font-system);
 	--font-brand: 'Josefin Sans', serif, var(--font-system);
+	--font-color: var(--gray-200);
+
+	/* Text Sizes */
+	--text-xl: 1.625rem;
+	--text-2xl: 2.125rem;
+	--text-3xl: 2.625rem;
+	--text-4xl: 3.5rem;
+	--text-5xl: 4.5rem;
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
+
+	/* Buttons */
+	--button-bg: var(--gradient-accent-orange);
 }
 
 :root.theme-dark {
@@ -112,17 +123,23 @@
 	--gray-999: #090b11;
 	--gold: #ca873e;
 
-	--accent-light: #221a12;
+	--accent-light: #644622;
 	--accent-regular: var(--gold);
 	--accent-dark: #ffd19f;
 	--accent-overlay: hsla(32, 81%, 64%, 0.33);
 	--accent-subtle-overlay: hsla(32, 83%, 35%, 0.33);
-	--accent-text-over: var(--gray-0);
+	// --accent-text-over: var(--dark-brown);
 
+		/* Backgrounds */
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile-dark.jpg');
+	--bg-alt-color: #191919;
 
+	/* Borders */
 	--box-border: 1px solid #624f3b4d;
 	--border-color: rgba(89, 93, 104, .6);
+
+	/* Fonts */
+	--font-color: var(--very-light-gold);
 
 	--bg-textured: var(--bg-tile);
 
@@ -130,14 +147,10 @@
 
 	--link-color: var(--accent-dark);
 
+	/* Gradients */
+
 	--gradient-stop-1: #87620a;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
-	--gradient-accent-orange: linear-gradient(
-		150deg,
-		#ffe08c,
-		var(--accent-regular),
-		var(--accent-light)
-	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
 	--text-gradient: linear-gradient(
@@ -160,6 +173,10 @@
 	--shadow-lg: 62px 62px 25px rgba(170, 135, 0, 0.01), 35px 35px 21px rgba(170, 135, 0, 0.05),
 	16px 16px 16px rgba(170, 135, 0, 0.06), 4px 4px 9px rgba(170, 135, 0, 0.1);
 	--shadow-heading: none;
+	--shadow-vertical: 0px -4px 24px 0px rgba(49,40,32,1), 0px 4px 24px 0px rgba(49,40,32,1);
+
+	/* Buttons */
+	--button-bg: var(--gradient-accent-orange);
 
 }
 
@@ -270,10 +287,9 @@ h5 {
 
 .wrapper.alt-wrapper {
 	position: relative;
-	--heading-color: var(--gray-50);
-	// border: 4px rgba(213, 154, 92, .5);
-	border: 4px var(--border-color);
-	border-style: solid none;
+	// --heading-color: var(--gray-50);
+	box-shadow: var(--shadow-vertical);
+	background-color: var(--bg-alt-color);
 }
 
 .wrapper.alt-wrapper:before {
@@ -284,7 +300,7 @@ h5 {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.2;
+  opacity: 0.1;
   background-image: var(--bg-pattern-main);
   background-repeat: no-repeat;
   background-position: center;
