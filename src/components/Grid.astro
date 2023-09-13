@@ -1,12 +1,12 @@
 ---
 interface Props {
-	variant?: 'offset' | 'small';
+	variant?: 'offset' | 'small' | '4columns';
 }
 
 const { variant } = Astro.props;
 ---
 
-<ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small' }]}>
+<ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small', fourcolumn: variant === '4columns' }]}>
 	<slot />
 </ul>
 
@@ -33,6 +33,11 @@ const { variant } = Astro.props;
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 4rem;
+		}
+
+		.grid.fourcolumn {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			/* gap: 2rem; */
 		}
 
 		.grid.offset {

@@ -36,6 +36,7 @@
 
 	--heading-color: var(--gold);
 	--alt-heading-color: var(--accent-light);
+	--alt-p-color: var(--dark-gold);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -85,8 +86,8 @@
 	--bg-alt-color: rgba(230, 230, 230, .7);
 
 	/* Borders */
-	--border-color: #eacdae;
 	--box-border: 1px solid #efe5db;
+	--vertical-border: 1px solid var(--gray-700);
 
 	/* Fonts */
 	--font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -139,7 +140,7 @@
 
 	/* Borders */
 	--box-border: 1px solid #624f3b4d;
-	--border-color: rgba(89, 93, 104, .6);
+	--vertical-border: 1px solid var(--gray-800);
 
 	/* Fonts */
 	--font-color: var(--gray-200);
@@ -148,6 +149,7 @@
 
 	--heading-color: var(--light-gold);
 	--alt-heading-color: var(--dark-brown);
+	--alt-p-color: var(--light-gold);
 
 	--link-color: var(--accent-dark);
 
@@ -182,7 +184,10 @@
 
 	/* Buttons */
 	--button-bg: var(--gradient-accent-orange);
+}
 
+:root.theme-dark wrapper.alt-wrapper {
+	--heading-color: var(--gray-100);
 }
 
 html,
@@ -292,9 +297,11 @@ h5 {
 
 .wrapper.alt-wrapper {
 	position: relative;
-	// --heading-color: var(--gray-50);
-	box-shadow: var(--shadow-vertical);
+	border-top: var(--vertical-border);
+	border-bottom: var(--vertical-border);
 	background-color: var(--bg-alt-color);
+
+	--heading-color: var(--gray-100);
 }
 
 .wrapper.alt-wrapper:before {
