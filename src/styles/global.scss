@@ -97,7 +97,7 @@
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-body: 'Public Sans', var(--font-system);
 	// --font-brand: Rubik, var(--font-system);
-	--font-brand: 'Josefin Sans', serif, var(--font-system);
+	--font-brand: 'Cormorant SC', serif, var(--font-system);
 	--font-color: var(--gray-200);
 
 	/* Text Sizes */
@@ -226,7 +226,7 @@ h4,
 h5 {
 	line-height: 1.1;
 	font-family: var(--font-brand);
-	font-weight: 600;
+	font-weight: 300;
 	// color: var(--gray-100);
 	color: var(--heading-color);
 	&.fancy-heading {
@@ -243,6 +243,7 @@ h2 {
 }
 
 h3 {
+	font-family: 'Josefin Sans', serif, var(--font-system);
 	font-size: var(--text-3xl);
 }
 

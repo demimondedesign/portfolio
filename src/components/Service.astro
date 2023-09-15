@@ -8,7 +8,7 @@ const { title, description } = Astro.props.data;
     <Icon icon="desktop" color="var(--gray-200)" size="2.5rem" />
   </div>
   <div class="center-mobile-only">
-    <h2>{title}</h2>
+    <h3>{title}</h3>
   </div>
   <p>{description}</p>
 </div>
@@ -30,8 +30,8 @@ const { title, description } = Astro.props.data;
 		}
 	}
 
-  .services h2 {
-    font-size: var(--text-2xl);
+  .services h3 {
+    font-size: var(--text-3xl);
     color: var(--accent-regular);
   }
 
@@ -39,8 +39,8 @@ const { title, description } = Astro.props.data;
     .services {
       height: 22rem;
     }
-		.services h2 {
-      font-size: var(--text-xl);
+		.services h3 {
+      font-size: var(--text-2xl);
     }
 	}
 </style>
