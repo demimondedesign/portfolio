@@ -81,12 +81,13 @@
 
 	/* Backgrounds */
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile.jpg');
-	// --bg-textured: linear-gradient(340deg, rgba(227,163,92,0.6) 0%, rgba(219,164,100,0.4) 6%, rgba(196,153,104,0.2) 21%, rgba(255,255,255,1) 51%);
-	--bg-textured: linear-gradient(340deg, rgba(227,163,92,0.8) 0%, rgba(219,164,100,0.4) 22%, rgba(196,153,104,0.2) 42%, rgba(255,255,255,1) 59%);
-	--bg-alt-color: rgba(230, 230, 230, .7);
+	// --bg-textured: linear-gradient(340deg, rgba(227,163,92,0.8) 0%, rgba(219,164,100,0.4) 22%, rgba(196,153,104,0.2) 42%, rgba(255,255,255,1) 59%);
+	--bg-textured: linear-gradient(0deg, rgba(94,94,94,0.2) 0%, rgba(182,182,182,0.2) 24%, rgba(254,254,254,0.2) 71%);
+	;
+	--bg-alt-color: rgba(236, 235, 235, 0.7);
 
 	/* Borders */
-	--box-border: 1px solid #efe5db;
+	--box-border: 1px solid var(--gold);
 	--vertical-border: 1px solid var(--gray-700);
 
 	/* Fonts */
@@ -135,17 +136,17 @@
 	// --accent-text-over: var(--dark-brown);
 
 		/* Backgrounds */
+		--bg-color: #090b11;
 	--bg-tile: repeat url('/assets/backgrounds/bg-tile-dark.jpg');
-	--bg-alt-color: #191919;
+	--bg-alt-color: #141821;
+	--bg-textured: var(--bg-alt-color);
 
 	/* Borders */
-	--box-border: 1px solid #624f3b4d;
+	--box-border: 1px solid #8c6538;
 	--vertical-border: 1px solid var(--gray-800);
 
 	/* Fonts */
 	--font-color: var(--gray-200);
-
-	--bg-textured: var(--bg-tile);
 
 	--heading-color: var(--light-gold);
 	--alt-heading-color: var(--dark-brown);
@@ -184,10 +185,6 @@
 
 	/* Buttons */
 	--button-bg: var(--gradient-accent-orange);
-}
-
-:root.theme-dark wrapper.alt-wrapper {
-	--heading-color: var(--gray-100);
 }
 
 html,
@@ -297,15 +294,15 @@ h5 {
 
 .wrapper.alt-wrapper {
 	position: relative;
-	border-top: var(--vertical-border);
-	border-bottom: var(--vertical-border);
+	// border-top: var(--vertical-border);
+	// border-bottom: var(--vertical-border);
 	background-color: var(--bg-alt-color);
 
-	--heading-color: var(--gray-100);
+	// --heading-color: var(--gray-100);
 }
 
 .wrapper.alt-wrapper:before {
-  content: ' ';
+  // content: ' ';
   display: block;
   position: absolute;
   left: 0;
