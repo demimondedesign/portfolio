@@ -17,6 +17,8 @@
 	--gray-999-basis: 0, 0%, 100%;
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gold: #ca873e;
+	--gold-basis: 31, 57%, 52%;
+	--gold_40: hsla(var(--gold-basis), 0.4);
 	--light-gold: #ffb867;
 	--very-light-gold: #f5e9dc;
 	--dark-gold: #b07a3f;
@@ -87,7 +89,7 @@
 	--bg-alt-color: rgba(236, 235, 235, 0.7);
 
 	/* Borders */
-	--box-border: 1px solid var(--gold);
+	--box-border: 1px solid var(--gold_40);
 	--vertical-border: 1px solid var(--gray-700);
 
 	/* Fonts */
@@ -142,7 +144,7 @@
 	--bg-textured: var(--bg-alt-color);
 
 	/* Borders */
-	--box-border: 1px solid #8c6538;
+	--box-border: 1px solid #8c6538c8;
 	--vertical-border: 1px solid var(--gray-800);
 
 	/* Fonts */

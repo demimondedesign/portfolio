@@ -16,7 +16,7 @@ import Icon from './Icon.astro';
 		</div>
 		<div class="box stack gap-1 lg:gap-2">
 			<div class="center-mobile-only">
-				<Icon icon="palette" color="var(--accent-regular)" size="3.5rem" gradient />
+				<Icon icon="palette" color="var(--accent-regular)" size="4.5rem" gradient />
 			</div>
 			<div class="center-mobile-only">
 				<h2 class="fancy-heading">100% Custom</h2>
@@ -39,15 +39,17 @@ import Icon from './Icon.astro';
 
 <style>
 	.box {
-		border: var(--box-border);
-		/* border-radius: .6rem; */
+		/* border: var(--box-border); */
 		padding: 1rem 1.5rem 2rem 1.5rem;
 		background: var(--bg-textured);
-		box-shadow: var(--shadow-lg);
 
 		@include mobile-only {
 			display: none;
 		}
+	}
+
+	.box:hover {
+		border: var(--box-border);
 	}
 
 	.skills {
