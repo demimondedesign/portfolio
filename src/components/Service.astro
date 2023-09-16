@@ -1,11 +1,11 @@
 ---
 import Icon from './Icon.astro';
-const { title, description } = Astro.props.data;
+const { title, description, icon } = Astro.props.data;
 ---
 
 <div class=" services box stack gap-1 lg:gap-2">
   <div class="center-mobile-only">
-    <Icon icon="desktop" color="var(--gray-200)" size="2.5rem" />
+    <Icon icon={icon} color="var(--gray-200)" size="2.5rem" />
   </div>
   <div class="center-mobile-only">
     <h3>{title}</h3>

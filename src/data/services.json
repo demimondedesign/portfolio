@@ -1,15 +1,21 @@
 [
   {
-    "title": "Web Design",
-    "description": "We build completely custom websites from scratch"
+    "title": "Custom Web Design",
+    "description": "We specialize in custom websites built from scratch that are tailored to your brand. They're optimized for speed, SEO, and conversions.",
+    "icon": "desktop"
   },
   {
-    "title": "Analytics",
-    "description": "google analytics, and more"
+    "title": "Boilerplate Web Design",
+    "description": "Pressed on time and resources? We can build you a website using a boilerplate theme from Squarespace or wordpress. We'll customize it to your brand.",
+    "icon": "boilerplate"
   },
   {
     "title": "Copywriting",
-    "description": "We write copy for your website"
+    "description": "We write copy for your website",
+    "icon": "desktop"
   },
-  { "title": "Another Service", "description": "another description" }
+  { "title": "Another Service",
+  "description": "another description",
+  "icon": "desktop"
+  }
 ]
