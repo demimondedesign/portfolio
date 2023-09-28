@@ -11,11 +11,19 @@
   },
   {
     "title": "Copywriting",
-    "description": "We write copy for your website",
-    "icon": "desktop"
+    "description": "We offer bespoke copywriting services that conveys professionlism and reflects your unique voice.",
+    "icon": "pencil"
   },
-  { "title": "Another Service",
-  "description": "another description",
-  "icon": "desktop"
+  { "title": "Privacy",
+  "description": "We take your privacy seriously. Your information is never shared with third parties. We offer offshore hosting for anonymity, and forms are encrypted.",
+  "icon": "lock"
+  },
+  { "title": "Protection",
+  "description": "We maintain multiple backups that are updated daily — both locally and in the cloud.",
+  "icon": "cloud"
+  },
+  { "title": "Support",
+  "description": "We offer 24/7 support for all of our clients. We're here to help you with any issues you may have.",
+  "icon": "phone"
   }
 ]
