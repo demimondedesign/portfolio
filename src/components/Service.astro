@@ -3,9 +3,9 @@ import Icon from './Icon.astro';
 const { title, description, icon } = Astro.props.data;
 ---
 
-<div class=" services box stack gap-1 lg:gap-2">
+<div class=" services box stack gap-2 lg:gap-4">
   <div class="center-mobile-only">
-    <Icon icon={icon} color="var(--gray-200)" size="2.5rem" />
+    <Icon icon={icon} color="var(--gray-200)" size="3.5rem" />
   </div>
   <div class="center-mobile-only">
     <h3>{title}</h3>
@@ -15,9 +15,6 @@ const { title, description, icon } = Astro.props.data;
 
 <style>
 
-  .services {
-    height: 11rem;
-  }
 	.box {
 		/* border: var(--box-border); */
 		/* border-radius: .6rem; */
@@ -31,16 +28,13 @@ const { title, description, icon } = Astro.props.data;
 	}
 
   .services h3 {
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
     color: var(--accent-regular);
   }
 
 	@media (min-width: 50em) {
-    .services {
-      height: 22rem;
-    }
 		.services h3 {
-      font-size: var(--text-2xl);
+      /* font-size: var(--text-2xl); */
     }
 	}
 </style>
