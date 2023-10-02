@@ -112,6 +112,9 @@
 
 	/* Buttons */
 	--button-bg: var(--gradient-accent-orange);
+
+	/* Icons */
+	--icon-color: var(--gray-200);
 }
 
 :root.theme-dark {
@@ -187,6 +190,9 @@
 
 	/* Buttons */
 	--button-bg: var(--gradient-accent-orange);
+
+	/* Icons */
+	--icon-color: var(--gray-200);
 }
 
 html,

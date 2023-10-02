@@ -5,7 +5,7 @@ const { title, description, icon } = Astro.props.data;
 
 <div class=" services box stack gap-2 lg:gap-4">
   <div class="center-mobile-only">
-    <Icon icon={icon} color="var(--gray-200)" size="3.5rem" />
+    <Icon icon={icon} color="var(--icon-color)" size="3.5rem" />
   </div>
   <div class="center-mobile-only">
     <h3>{title}</h3>
@@ -29,7 +29,11 @@ const { title, description, icon } = Astro.props.data;
 
   .services h3 {
     font-size: var(--text-2xl);
-    color: var(--accent-regular);
+    color: var(--dark-gold);
+  }
+
+  :root.theme-dark .services h3 {
+    color: var(--gold);
   }
 
 	@media (min-width: 50em) {
