@@ -1,0 +1,102 @@
+---
+import type { Package } from '../data/packages';
+
+interface Props {
+	package: Package;
+  active?: boolean;
+}
+
+const { package: { title, subheading, price, priceText = "", features = [] }, active = false }: Props = Astro.props;
+
+const nonActiveClasses = "card w-96 p-8 text-center rounded-lg pr-16 shadow-xl";
+const activeClasses = "card active-card w-80 p-8 bg-gray-900 text-center rounded-lg text-white shadow-xl transform scale-125";
+---
+
+<div class={ active ? activeClasses : nonActiveClasses }>
+  <h3 class="text-2xl">{title}</h1>
+  <p class="price pt-2 tracking-wide">
+      <span class="align-top">$ </span>
+      <span class="text-3xl">{'' + price + priceText}</span>
+  </p>
+  <p class="subheading italic">
+    {subheading}
+  </p>
+  <hr class="mt-4 border-1 border-gray-600">
+  <div class="pt-8">
+    {
+      features.map((feature) => (
+        <p class="text-left">
+          <span class="material-symbols-outlined align-middle">
+              done
+          </span>
+          <span class="pl-2">
+              {feature}
+          </span>
+        </p>
+      ))
+    }
+
+    <a href="#" class="">
+        <p class="button primary-button w-full py-4 mt-8 rounded-xl text-white">
+            <span class="font-medium">
+                Choose Plan
+            </span>
+            <span class="pl-2 material-symbols-outlined align-middle text-sm">
+                east
+            </span>
+        </p>
+    </a>
+  </div>
+  {
+    active && (
+      <div class="absolute top-4 right-4">
+        <p class="button font-semibold px-4 py-1 rounded-md uppercase text-xs">Popular</p>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .card {
+    background-color: #393b40;
+  }
+
+  .card h3 {
+    color: var(--gray-400);
+  }
+
+  .card p {
+    font-family: "Josefin Sans", serif, var(--font-system);
+  }
+
+  .card .price {
+    color: var(--accent-regular);
+  }
+
+  .card .button {
+    background-color: var(--accent-regular);
+  }
+
+  .card.active-card {
+    border-width: 3px;
+    border-color: var(--accent-regular);
+  }
+
+  .card.active-card .primary-button {
+    border: 2px solid var(--light-gold);
+  }
+
+  .card.active-card h3 {
+    color: #ffffff;
+  }
+
+  .card.active-card .price {
+    color: var(--light-gold);
+  }
+
+  :root.theme-dark .card {
+    background-color: #30333b;
+  }
+
+
+</style>
