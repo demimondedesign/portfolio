@@ -3,7 +3,7 @@ import PricingPackage from "./PricingPackage.astro";
 import { quickStart, standard, premium } from "../data/packages";
 ---
 
-<div class="pt-24 flex flex-row pb-44">
+<div class=" pt-24 flex flex-col md:flex-row gap-8 md:gap-0 md:pb-20">
   <!-- Squarespace :: Basic Card -->
   <PricingPackage package={quickStart} />
 
@@ -13,3 +13,4 @@ import { quickStart, standard, premium } from "../data/packages";
   <!-- Premium :: Basic Card -->
   <PricingPackage package={premium} />
 </div>
+

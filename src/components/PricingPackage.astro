@@ -8,8 +8,8 @@ interface Props {
 
 const { package: { title, subheading, price, priceText = "", features = [] }, active = false }: Props = Astro.props;
 
-const nonActiveClasses = "card w-96 p-8 text-center rounded-lg pr-16 shadow-xl";
-const activeClasses = "card active-card w-80 p-8 bg-gray-900 text-center rounded-lg text-white shadow-xl transform scale-125";
+const nonActiveClasses = "card md:w-96 p-8 text-center rounded-lg md:pr-16 shadow-xl";
+const activeClasses = "card active-card md:w-80 p-8 bg-gray-900 text-center rounded-lg text-white shadow-xl transform md:scale-125";
 ---
 
 <div class={ active ? activeClasses : nonActiveClasses }>
@@ -37,7 +37,7 @@ const activeClasses = "card active-card w-80 p-8 bg-gray-900 text-center rounded
     }
 
     <a href="#" class="">
-        <p class="button primary-button w-full py-4 mt-8 rounded-xl text-white">
+        <p class="button primary-button w-full py-4 mt-8 rounded-md text-white">
             <span class="font-medium">
                 Choose Plan
             </span>
