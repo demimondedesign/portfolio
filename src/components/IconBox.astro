@@ -1,9 +1,13 @@
 ---
 import Icon from './Icon.astro';
-const { title, description, icon } = Astro.props.data;
+import type { Service } from '../data/services';
+
+interface Props extends Service {}
+
+const { title, description, icon } = Astro.props;
 ---
 
-<div class=" services box stack gap-2 lg:gap-4">
+<div class="icon-box box stack gap-2 lg:gap-4">
   <div class="center-mobile-only">
     <Icon icon={icon} color="var(--icon-color)" size="3.5rem" />
   </div>
@@ -27,17 +31,17 @@ const { title, description, icon } = Astro.props.data;
 		}
 	}
 
-  .services h3 {
+  .icon-box h3 {
     font-size: var(--text-2xl);
     color: var(--dark-gold);
   }
 
-  :root.theme-dark .services h3 {
+  :root.theme-dark .icon-box h3 {
     color: var(--gold);
   }
 
 	@media (min-width: 50em) {
-		.services h3 {
+		.icon-box h3 {
       /* font-size: var(--text-2xl); */
     }
 	}

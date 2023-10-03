@@ -10,7 +10,7 @@ import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
-import Service from '../components/Service.astro';
+import IconBox from '../components/IconBox.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -21,7 +21,7 @@ import Pricing from '../components/Pricing.astro';
 const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
-import services from "../data/services.json";
+import { services } from "../data/services";
 
 
 // Full Astro Component Syntax:
@@ -76,9 +76,9 @@ import services from "../data/services.json";
 					<div class="gallery">
 						<Grid variant='4columns'>
 							{
-								services.map((service) => (
+								services.map(({title, description, icon}) => (
 									<li>
-										<Service data={service} />
+										<IconBox title={title} description={description} icon={icon} />
 									</li>
 								))
 							}
@@ -109,7 +109,7 @@ import services from "../data/services.json";
 					</div>
 				</section>
 			</div> -->
-			
+
 			<div class="wrapper alt-wrapper stack gap-20 lg:gap-48">
 				<section class="section with-background bg-variant">
 					<header class="section-header stack gap-2 lg:gap-4">
