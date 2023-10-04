@@ -4,29 +4,96 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-	<div class="group">
-		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
-			<Icon icon="rocket-launch" size="1.2em" />
-		</p>
-		<p>&copy; {currentYear} Jeanine White</p>
+	<div class="row">
+		<div class="group">
+			<div class="content centered logo mx-auto">
+				<img class="object-contain w-56" src="/assets/logo-sm.svg" alt="Demimonde Designs logo">
+			</div>
+		</div>
+		<div class="group navigation">
+			<h2 class="heading">Navigation</h2>
+			<div class="content">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="group contact">
+			<h2 class="heading">Contact Us</h2>
+			<div class="content centered">
+				<ul>
+					<li><a href="/contact">Send us an email</a></li>
+					<li><a href="/about">Book a consult</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="group">
+			<h2 class="heading">Socials</h2>
+			<div class="content centered">
+				<p class="socials">
+					<span class="social-link"><a href="https://twitter.com/DemimondeDesign"><Icon icon="twitter" size="1.5rem"/></a></span>
+					<span class="social-link"><a href="https://github.com/demimondedesign"><Icon icon="github" size="1.5rem"/></a></span>
+					<span class="social-link"><a href="https://www.instagram.com/demimondedesigns/"><Icon icon="instagram" size="1.5rem"/></a></span>
+				</p>
+			</div>
+		</div>
 	</div>
-	<p class="socials">
-		<a href="https://twitter.com/me"> Twitter</a>
-		<a href="https://github.com/me"> GitHub</a>
-		<a href="https://codepen.io/me"> CodePen</a>
-	</p>
+
+	<!-- <div class="row bottom-bar">
+		<div class="group">
+			<div class="content">
+				<p class="flex gap-1">
+					Designed and developed by Sophia Skye<Icon icon="rocket-launch" size="1.2em" />
+				</p>
+			
+			</div>
+		</div>
+	</div> -->
+
+	<!-- Designed & Developed with <a href="https://astro.build/">Astro</a>
+	<Icon icon="rocket-launch" size="1.2em" /> -->
+
+		<!-- <p>&copy; {currentYear} Sophia Skye</p> -->
 </footer>
 <style>
 	footer {
+		margin-top: auto;
+		padding: 1.5rem 2rem 3rem;
+		text-align: center;
+		background-color: #090b11;
+		border-top: 1px solid var(--accent-light);
+		color: var(--gray-400);
+		font-size: var(--text-sm);
+	}
+
+	footer .row {
+		padding: 2rem 0rem;
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
-		margin-top: auto;
-		padding: 3rem 2rem 3rem;
-		text-align: center;
-		color: var(--gray-400);
-		font-size: var(--text-sm);
+	}
+
+	footer .row.bottom-bar {
+		justify-content: center;
+		background-color: var(--gray-200);
+	}
+
+	footer .heading {
+		font-size: var(--text-2xl);
+	}
+
+	footer .content {
+		flex-grow: 1;
+	}
+
+	footer .centered {
+		display: flex;
+		flex-direction: column;
+		gap: .05rem;
+		justify-content: center;
 	}
 
 	footer a {
@@ -44,31 +111,38 @@ const currentYear = new Date().getFullYear();
 	.group {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 1rem;
 	}
 
 	.socials {
 		display: flex;
 		justify-content: center;
-		gap: 1rem;
+		gap: 2rem;
 		flex-wrap: wrap;
 	}
 
 	@media (min-width: 50em) {
 		footer {
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 2.5rem 5rem;
+			padding: 2.0rem 2.5rem;
 		}
 
-		.group {
+		footer .row {
+			padding: 1rem 0rem;
 			flex-direction: row;
-			gap: 1rem;
+			justify-content: space-between;
+		}
+
+		/* footer .row.bottom-bar {
+			justify-content: center;
+		} */
+
+		.group {
+			/* flex-direction: row; */
 			flex-wrap: wrap;
 		}
 
 		.socials {
-			justify-content: flex-end;
+			gap: 1rem;
 		}
 	}
 </style>
