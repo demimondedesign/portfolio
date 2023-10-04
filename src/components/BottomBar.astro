@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro';
+const currentYear = new Date().getFullYear();
+---
+
+	<div class="bottom-bar">
+    <div class="content">
+      <p class="flex gap-1">
+        Designed and developed by Sophia Skye<Icon icon="rocket-launch" size="1.2em" />
+      </p>
+    </div>
+	</div>
+
+  <style>
+    .bottom-bar {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      background-color: #090b11;
+      color: var(--gray-400);
+      font-size: var(--text-sm);
+	  }
+
+    .bottom-bar .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
