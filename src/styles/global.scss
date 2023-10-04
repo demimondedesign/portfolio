@@ -58,6 +58,7 @@
 		var(--accent-regular),
 		var(--accent-dark)
 	);
+	--gradient-background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
 
 	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
@@ -162,7 +163,8 @@
 	/* Gradients */
 
 	--gradient-stop-1: #87620a;
-	--gradient-subtle: linear-gradient(150deg, rgba(202,135,62,1) 0%, rgba(230,146,57,1) 9%, rgba(255,184,103,1) 40%, rgba(245,233,220,1) 90%);;
+	--gradient-subtle: linear-gradient(150deg, rgba(202,135,62,1) 0%, rgba(230,146,57,1) 9%, rgba(255,184,103,1) 40%, rgba(245,233,220,1) 90%);
+	--gradient-background: radial-gradient(var(--bg-alt-color), #1c212e 150%);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
 	--text-gradient: linear-gradient(
