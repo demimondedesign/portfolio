@@ -17,8 +17,6 @@ const { align = 'center', tagline, title } = Astro.props;
 				<div class="py-2">
 					<h1 class="title hidden">{title}</h1>
 					<Logo />
-					<!-- <div class="logo w-full bg-center bg-cover"></div> -->
-					<!-- <img src="/assets/logo-sm.svg" alt="Demimonde Designs" class="mx-auto w-full" /> -->
 				</div>
 				<div class="py-2 responsive-px">
 					{tagline && <p class="tagline">{tagline}</p>}
@@ -33,7 +31,6 @@ const { align = 'center', tagline, title } = Astro.props;
 	@import '../styles/sass-variables';
 
 	.hero {
-		// background-image: url('/assets/backgrounds/header-background.png');
 		background-image: url('/assets/backgrounds/background-tile.jpg');
 		height: 30rem;
 	}
