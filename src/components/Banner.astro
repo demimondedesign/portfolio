@@ -1,0 +1,88 @@
+---
+
+interface Props {
+	title: string;
+	tagline?: string;
+  image?: string;
+}
+
+const { tagline, title, image = "/assets/backgrounds/background-tile.jpg" } = Astro.props;
+
+const imageUrl = image ? `url(${image})` : 'none';
+---
+
+
+<header class="banner w-full bg-center bg-repeat center">
+	<div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-70">
+		<div class="text-center">
+				<div class="py-2">
+					<h1 class="title">{title}</h1>
+				</div>
+				<div class="py-2 responsive-px">
+					{tagline && <p class="tagline">{tagline}</p>}
+				</div>
+		</div>
+</div>
+	<slot />
+</header>
+
+
+<style lang="scss" define:vars={{ imageUrl }}>
+	@import '../styles/sass-variables';
+
+	.banner {
+		background-image: var(--imageUrl);
+		height: 15rem;
+	}
+
+	.banner .responsive-px {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+
+	.banner .text-align-center {
+		text-align: center !important;
+		margin: auto;
+	}
+
+	.title,
+	.tagline {
+		color: #be8d58;
+		margin-inline: auto;
+	}
+
+	.title {
+    padding: 0.5rem;
+		font-size: var(--text-2xl);
+    background-color: rgba(0,0,0,0.4);
+		// color: #fefefe;
+	}
+
+	@media (min-width: $breakpoint-mobile) {
+		.banner {
+			height: 20rem;
+			font-size: var(--text-lg);
+		}
+
+		.banner .responsive-px {
+			padding-left: 2rem 2rem;
+			padding-right: 2rem 2rem;
+		}
+		
+		.tagline {
+			font-size: var(--text-lg);
+		}
+		.start {
+			text-align: start;
+		}
+
+		.start .title,
+		.start .tagline {
+			margin-inline: unset;
+		}
+
+		.title {
+			font-size: var(--text-4xl);
+		}
+	}
+</style>

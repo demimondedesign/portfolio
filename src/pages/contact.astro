@@ -1,11 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
-
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
-import Hero from '../components/Hero.astro';
+import Banner from '../components/Banner.astro';
 
 
 // Page section components
@@ -15,12 +13,11 @@ import Hero from '../components/Hero.astro';
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48" id="index-page">
 		<div class="padding-0 wrapper stack gap-8 lg:gap-20">
-			<Hero
-				title="Bespoke  Web Design for Escorts"
-				tagline="We craft exquisite bespoke websites for independent escorts -- by independent escorts. Elevate your online presence with a unique luxury brand designed to attract more clients and increase your revenue."
-				align="center"
+			<Banner
+				title="Contact Us"
+				image="/assets/banners/contact-banner.jpg"
 			>
-			</Hero>
+		</Banner>
 		</div>
 
 		<main>
@@ -44,43 +41,16 @@ import Hero from '../components/Hero.astro';
 	#index-page .padding-0 {
 		padding: 0 !important;
 	}
-	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
 
 	.roles {
 		display: none;
 	}
 
-	.hero img {
-		aspect-ratio: 5 / 4;
-		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
 	@media (min-width: 50em) {
-		.hero {
-			display: grid;
-			/* grid-template-columns: 6fr 4fr; */
-			padding-inline: 2.5rem;
-			gap: 3.75rem;
-		}
-
 		.roles {
 			margin-top: 0.5rem;
 			display: flex;
 			gap: 0.5rem;
-		}
-
-		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
-			object-fit: cover;
 		}
 	}
 
