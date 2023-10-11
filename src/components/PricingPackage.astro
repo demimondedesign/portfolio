@@ -1,5 +1,6 @@
 ---
 import type { Package } from '../data/packages';
+import CallToAction from './CallToAction.astro';
 
 interface Props {
 	package: Package;
@@ -37,7 +38,7 @@ const activeClasses = "card active-card md:w-80 p-8 bg-gray-900 text-center roun
     }
 
     <a href="#" class="">
-        <p class="button primary-button w-full py-4 mt-8 rounded-md text-white">
+        <p class="button primary-button w-full py-4 mt-8 text-white">
             <span class="font-medium">
                 Choose Plan
             </span>
@@ -75,6 +76,7 @@ const activeClasses = "card active-card md:w-80 p-8 bg-gray-900 text-center roun
 
   .card .button {
     background-color: var(--accent-regular);
+    border-radius: 4px;
   }
 
   .card.active-card {
@@ -83,7 +85,7 @@ const activeClasses = "card active-card md:w-80 p-8 bg-gray-900 text-center roun
   }
 
   .card.active-card .primary-button {
-    border: 2px solid var(--light-gold);
+    border: 1px solid var(--light-gold);
   }
 
   .card.active-card h3 {
