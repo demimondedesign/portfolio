@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
 import Banner from '../components/Banner.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 
 // Page section components
@@ -23,12 +24,16 @@ import Banner from '../components/Banner.astro';
 		<main>
 
 			<div class="wrapper stack gap-20 lg:gap-48">
-				<section class="section">
+				<section class="section columns-2">
 					<header class="section-header stack gap-2 lg:gap-4">
-						<h2>Contact Us</h2>
+						<h3>Curious? Shoot me a message! </h3>
+						<p>
+							No question is too big or too small. I'm happy to answer any questions you may have about my services, or just chat about your project.
+						</p>
 					</header>
-					<div class="gallery">
-						
+					<div class="content">
+						<!-- <script type="text/javascript" src="https://form.jotform.com/jsform/232818011281145"></script> -->
+						<ContactForm />
 					</div>
 				</section>
 			</div>
@@ -90,11 +95,8 @@ import Banner from '../components/Banner.astro';
 	}
 
 	.section-header {
-		justify-self: center;
-		text-align: center;
 		max-width: 50ch;
 		font-size: var(--text-md);
-		/* color: var(--gray-300); */
 		color: var(--font-color);
 	}
 
@@ -106,12 +108,18 @@ import Banner from '../components/Banner.astro';
 	@media (min-width: 50em) {
 		.section {
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+			grid-template-areas: 'header header content content' 'header header content content';
+			gap: 5rem;
+		}
+
+		.section.columns-2 {
+			grid-template-columns: 1fr;
+			grid-template-areas: 'header content';
 			gap: 5rem;
 		}
 
 		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+			grid-template-areas: 'header header content content' 'header header content content';
 		}
 
 		.section-header {
@@ -128,8 +136,8 @@ import Banner from '../components/Banner.astro';
 			text-align: left;
 		}
 
-		.gallery {
-			grid-area: gallery;
+		.content {
+			grid-area: content;
 		}
 
 		.cta {
