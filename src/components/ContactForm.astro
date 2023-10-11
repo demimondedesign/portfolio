@@ -36,6 +36,11 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
 <!-- modify this form HTML and place wherever you want your form -->
 <form class="jotform-form" action="https://submit.jotform.com/submit/232818011281145" method="post" name="form_232818011281145" id="232818011281145" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="232818011281145" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
   <div role="main" class="form-all form-encrypted">
+    <div class="form-header">
+      <p>
+        Be patient submitting this form. It is encrypted and takes a few seconds to process.
+      </p>
+    </div>
     <ul class="form-section page-section">
       <li id="cid_9" class="form-input-wide" data-type="control_head">
 
@@ -127,6 +132,11 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
   .form-radio-item label {
     font-weight: normal;
   }
+
+  .form-header {
+    padding: 24px 36px 24px 36px;
+    color: var(--accent-dark);
+  }
   /*
   @width30: (unit(@formWidth, px) + 60px);
   @width60: (unit(@formWidth, px)+ 120px);
@@ -135,10 +145,16 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
   /* | */
   @media screen and (min-width: 480px) {
     .form-all {
-      border: 1px solid #cec8c8;
       -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
       -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
       box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    }
+
+    :root.theme-dark .form-all {
+      background-color: var(--bg-alt-color);
+      -webkit-box-shadow: 0 3px 9px rgba(155, 155, 155, 0.3);
+      -moz-box-shadow: 0 3px 9px rgba(155, 155, 155, 0.3);
+      box-shadow: 0 3px 9px rgba(155, 155, 155, 0.3);
     }
   }
   /* | */
@@ -703,13 +719,6 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
         /* font-size: 14px */
       }
     
-    .supernova {
-      background-color: #f5f5f5;
-    }
-    .supernova body {
-      background: transparent;
-    }
-    
       .supernova .form-all, .form-all {
         background-color: var(--gray-999);
       }
@@ -769,18 +778,6 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
         border: 1px solid #FF3200;
         box-shadow: 0 0 3px #FF3200;
       }
-     
-        
-      .supernova {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center top;
-      }
-  
-        .supernova, #stage {
-          background-image: none;
-        }
       
         .form-all {
           background-image: none;
@@ -794,6 +791,18 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
   
   [data-type="control_head"] {
       padding-bottom : 20px;
+  }
+
+  :root.theme-dark .form-all {
+      background-color: var(--bg-alt-color);
+      border: 1px solid rgba(227, 163, 92, 0.5);
+      -webkit-box-shadow: 0 3px 9px rgba(255, 255, 255, 0.1);
+      -moz-box-shadow: 0 3px 9px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 3px 9px rgba(255, 255, 255, 0.1);
+  }
+
+  :root.theme-dark .badge-wrapper {
+    border-top: 1px solid #0c0f14;
   }
   
   /*responsive fields*/
