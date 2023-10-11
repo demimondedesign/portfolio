@@ -4,15 +4,17 @@ interface Props {
 	title: string;
 	tagline?: string;
   image?: string;
+	bgAlign?: 'top' | 'center';
 }
 
-const { tagline, title, image = "/assets/backgrounds/background-tile.jpg" } = Astro.props;
+const { tagline, title, image = "/assets/backgrounds/background-tile.jpg", bgAlign = 'center' } = Astro.props;
 
 const imageUrl = image ? `url(${image})` : 'none';
+const bgAlignClass = bgAlign === 'center' ? 'bg-center' : 'bg-top';
 ---
 
 
-<header class="banner w-full bg-center bg-repeat center">
+<header class:list={["banner w-full center", bgAlignClass]}>
 	<div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-70">
 		<div class="text-center">
 				<div class="py-2">
