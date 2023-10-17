@@ -37,7 +37,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
 <form class="jotform-form" action="https://submit.jotform.com/submit/232818011281145" method="post" name="form_232818011281145" id="232818011281145" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="232818011281145" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
   <div role="main" class="form-all form-encrypted">
     <div class="form-header">
-      <p>
+      <p class="text-sm md:text-base">
         Be patient submitting this form. It is encrypted and takes a few seconds to process.
       </p>
     </div>
@@ -136,6 +136,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
   .form-header {
     padding: 24px 36px 24px 36px;
     color: var(--accent-dark);
+    text-align: center;
   }
   /*
   @width30: (unit(@formWidth, px) + 60px);
@@ -155,6 +156,10 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
       -webkit-box-shadow: 0 3px 9px rgba(155, 155, 155, 0.3);
       -moz-box-shadow: 0 3px 9px rgba(155, 155, 155, 0.3);
       box-shadow: 0 3px 9px rgba(155, 155, 155, 0.3);
+    }
+
+    .form-header {
+      text-align: left;
     }
   }
   /* | */
@@ -451,6 +456,7 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
     }
     .form-all {
       border: 0;
+      border-top: 1px solid var(--gray-700);
       width: 94%!important;
       max-width: initial;
     }
@@ -803,6 +809,12 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
 
   :root.theme-dark .badge-wrapper {
     border-top: 1px solid #0c0f14;
+  }
+
+  @media screen and (max-width: 480px), screen and (max-device-width: 768px) and (orientation: portrait), screen and (max-device-width: 415px) and (orientation: landscape) {
+    :root.theme-dark .form-all {
+      border: 0;
+    }
   }
   
   /*responsive fields*/
