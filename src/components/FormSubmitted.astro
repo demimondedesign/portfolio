@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import envelopeOpen from '../images/envelopeOpen.png';
+
+---
+
+<div class="card form-result">
+  <div class="content-area stack gap-2 lg:gap-4 p-4">
+    <div class="image-area">
+      <Image src={envelopeOpen} alt="form submitted successfully" width="256" height="256"/>
+    </div>
+    <div class="text-area text-center stack gap-2">
+      <h3 class="heading">Success!</h3>
+      <p>The form has been submitted.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+	.card {
+    width: 100%;
+    background-color: var(--gray-900);
+    border: 1px solid var(--accent-light);
+    border-radius: 0.75rem;
+	}
+
+	@media (min-width: 50em) {
+		.card {
+      height: 100%;
+		}
+
+		.heading {
+
+		}
+	}
+</style>

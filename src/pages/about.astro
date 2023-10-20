@@ -2,16 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
 import Banner from '../components/Banner.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | Demimonde Designs" description="About Demimonde Designs: Web design for escorts">
 	<div class="stack gap-20" id="about-page">
 		<div class="padding-0 wrapper stack gap-8 lg:gap-20">
 			<Banner
 				title="About"
-				image="/assets/banners/about-banner.jpg"
+				image="/assets/banners/about-demimonde-designs-banner.jpg"
 			>
 			</Banner>
 		</div>
@@ -19,45 +18,52 @@ import Banner from '../components/Banner.astro';
 		<main>
 
 			<div class="wrapper stack gap-20">
-				<section class="section">
-					<h2 class="section-title">Background</h2>
+				<section class="section section-col-6">
+					<div class="section-header">
+						<h2 class="section-title">Background</h2>
+					</div>
 					<div class="content">
 						<p>
-							Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-							Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-							id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-							pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-						</p>
-						<p>
-							Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-							natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-							condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-							quam elementum pulvinar etiam non.
-						</p>
-						<p>
-							Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-							eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-							Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-							pretium fusce.
+							Demimonde Designs was founded in 2023 by an escort who understood the industry's unique need for 
+							safety — as well as the importance of the website in acquiring clients. We prioritize working 
+							with you to fully realize your brand, down to the fine details. 
 						</p>
 					</div>
 				</section>
 			</div>
 
 			<div class="wrapper stack gap-20">
-				<section class="section">
-					<h2 class="section-title">Education</h2>
+				<section class="section section-col-6">
+					<div class="section-header">
+						<h2 class="section-title">Our Websites</h2>
+					</div>
 					<div class="content">
-						<p>Corporis voluptates tenetur laudantium.</p>
+						<p>
+							We focus on the combination of <span class="font-bold">privacy</span>, <span class="font-bold">SEO</span>, and <span class="font-bold">customization</span>.
+						</p>
+						<p>
+							Websites are built with <span class="font-bold">privacy</span> in mind. We use a combination of 
+							privacy-first tools to ensure that your website is as secure as possible. All websites have SSL certificates 
+							and encrypted forms. We also offer offshore hosting.
+						</p>
+						<p>
+							We understand the importance of SEO in the escort industry. Your website will be optimized to 
+							bump you to the top of search results to ensure that you are found by the right clients. We also 
+							provide tools to monitor your acquisition traffic.
+						</p>
 					</div>
 				</section>
 			</div>
 
 			<div class="wrapper stack gap-20">
-				<section class="section">
-					<h2 class="section-title">Skills</h2>
+				<section class="section section-col-6">
+					<div class="section-header">
+						<h2 class="section-title">About Our Founder</h2>
+					</div>
 					<div class="content">
-						<p>officia unde omnis</p>
+						<p>
+							Sophia Skye is a web developer and designer with a background in the escort industry. (More info soon.)
+						</p>
 					</div>
 				</section>
 			</div>
@@ -72,10 +78,9 @@ import Banner from '../components/Banner.astro';
 
 	/* ====================================================== */
 
-	.section {
+	.section.section-col-6 {
 		max-width: 83rem;
 		padding-inline: 1.5rem;
-		display: grid;
 		gap: 2rem;
 	}
 
@@ -105,40 +110,35 @@ import Banner from '../components/Banner.astro';
 		/* --hero-bg: var(--bg-image-subtle-1); */
 	}
 
-	.section-header {
+	.section-col-6 .section-header {
 		max-width: 50ch;
 		font-size: var(--text-md);
 		color: var(--font-color);
 	}
 
-	.section-header h3 {
+	.section-col-6 .section-header h3 {
 		font-size: var(--text-3xl);
 		color: var(--heading-color);
 	}
 
 	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header content content' 'header header content content';
-			gap: 5rem;
-		}
-
-		.section.columns-2 {
-			grid-template-columns: 1fr;
-			grid-template-areas: 'header content';
+		.section.section-col-6 {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-areas: 'header header content content content content' 'header header content content content content';
 			gap: 5rem;
 		}
 
 		.section.with-cta {
-			grid-template-areas: 'header header content content' 'header header content content';
+			grid-template-areas: 'header header content content content content' 'header header content content content content';
 		}
 
-		.section-header {
+		.section-col-6 .section-header {
 			grid-area: header;
 			font-size: var(--text-lg);
 		}
 
-		.section-header h3 {
+		.section-col-6 .section-header h3 {
 			font-size: var(--text-4xl);
 		}
 
@@ -178,13 +178,23 @@ import Banner from '../components/Banner.astro';
 	}
 
 	.section-title {
+		position: relative;
 		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
+		font-size: var(--text-2xl);
+	}
+
+	.section-title:before {
+		position: absolute;
+		left: 0;
+		bottom: -1rem;
+		height: 0;
+		width: 9rem;
+		content: '';
+		border-top: 1px solid var(--gold);
 	}
 
 	.content {
-		grid-column: 2 / 4;
+		grid-area: content;
 	}
 
 	.content :global(a) {
