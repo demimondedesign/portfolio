@@ -4,7 +4,7 @@ import envelopeOpen from '../images/envelopeOpen.png';
 
 ---
 
-<div class="card form-result">
+<div class="card form-result p-8 lg:p-12">
   <div class="content-area stack gap-2 lg:gap-4 p-4">
     <div class="image-area">
       <Image src={envelopeOpen} alt="form submitted successfully" width="256" height="256"/>
@@ -19,10 +19,12 @@ import envelopeOpen from '../images/envelopeOpen.png';
 <style>
 	.card {
     width: 100%;
-    background-color: var(--gray-900);
-    border: 1px solid var(--accent-light);
-    border-radius: 0.75rem;
+    border: 1px solid rgba(154,108,52,0.5);
 	}
+
+  :root.theme-dark .card {
+    background-color: var(--bg-alt-color);
+  }
 
 	@media (min-width: 50em) {
 		.card {
