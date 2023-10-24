@@ -5,12 +5,16 @@ import '../styles/global.scss';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	featuredImage?: string | undefined;
 }
 
 const {
 	title = 'Escort Web Design and SEO',
 	description = "Escort web design and SEO services, specializing in speed and SEO optimization. We build elegant websites for elite escorts. Available worldwide",
+	featuredImage = "/assets/featuredImage.png",
 } = Astro.props;
+
+const featuredImageURL = new URL(featuredImage, Astro.url.origin).toString();
 ---
 
 <meta charset="UTF-8" />
@@ -20,9 +24,9 @@ const {
 <meta name="twitter:site" content="@demimondedesign" /> 
 <meta name="twitter:title" content="Demimonde Designs" /> 
 <meta name="twitter:description" content="Web design for escorts" /> 
-<meta name="twitter:image" content="/assets/featuredImage.png" />
+<meta name="twitter:image" content={featuredImageURL} />
 
-<meta name="image" property="og:image" content="/assets/featuredImage.png" />
+<meta name="image" property="og:image" content={featuredImageURL} />
 
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
