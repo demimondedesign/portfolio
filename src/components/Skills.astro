@@ -39,10 +39,6 @@ import Icon from './Icon.astro';
 
 <style>
 	.box {
-		/* border: var(--box-border); */
-		padding: 1rem 1.5rem 2rem 1.5rem;
-		background: var(--bg-textured);
-
 		@include mobile-only {
 			display: none;
 		}
@@ -71,7 +67,8 @@ import Icon from './Icon.astro';
 
 	@media (min-width: 50em) {
 		.box {
-			/* border-radius: 1.5rem; */
+			background: var(--bg-textured);
+			padding: 1rem 1.5rem 2rem 1.5rem;
 		}
 
 		.skills {

@@ -1,5 +1,5 @@
 ---
-import Icon, { Props as IconProps } from './Icon.astro';
+import Icon, { type Props as IconProps } from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 
 /** Main menu items */
@@ -116,7 +116,6 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		position: relative;
 		font-family: var(--font-brand);
 		font-weight: 500;
-		margin-bottom: 3.5rem;
 	}
 
 	.menu-header {
@@ -240,6 +239,7 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 			align-items: center;
 			padding: 2.5rem 5rem;
 			gap: 1rem;
+			margin-bottom: 3.5rem;
 		}
 
 		.menu-header {

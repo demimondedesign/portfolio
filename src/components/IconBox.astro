@@ -34,6 +34,7 @@ const { title, description, icon } = Astro.props;
   .icon-box h3 {
     font-size: var(--text-2xl);
     color: var(--dark-gold);
+    text-align: center;
   }
 
   :root.theme-dark .icon-box h3 {
@@ -42,7 +43,7 @@ const { title, description, icon } = Astro.props;
 
 	@media (min-width: 50em) {
 		.icon-box h3 {
-      /* font-size: var(--text-2xl); */
+      text-align: left;
     }
 	}
 </style>
