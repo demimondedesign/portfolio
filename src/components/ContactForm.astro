@@ -326,9 +326,14 @@ JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit","qid":"2","text":"SUBM
     align-items: center;
     justify-content: flex-end;
     padding: 14px 20px;
-    background: rgba(224, 224, 224, 0.2);
-    border-top: 1px solid #dcdde0;
-}
+  }
+  @media (min-width: 50em) {
+    div.badge-wrapper {
+      background: rgba(224, 224, 224, 0.2);
+      border-top: 1px solid #dcdde0;
+    }
+  }
+
   /*
   & when ( @buttonFontType = google ) {
     
